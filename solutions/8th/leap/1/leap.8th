@@ -1,0 +1,6 @@
+: leap-year? \ n -- ?
+    dup 4 mod 0 =               \ check if year is divisible by 4
+    swap dup 400 mod 0 =        \ check if year is divisible by 400
+    swap 100 mod 0 = not        \ check if year is divisible by 100
+    or and                      \ apply leap year rules and return result
+;
